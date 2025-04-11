@@ -18,7 +18,7 @@ class Something
     public int $id;
 
     /** @var Collection<int, SomethingElse> */
-    #[ORM\OneToMany(targetEntity: SomethingElse::class, mappedBy: 'something', fetch: 'LAZY')]
+    #[ORM\OneToMany(targetEntity: SomethingElse::class, mappedBy: 'something', fetch: 'LAZY', indexBy: 'id')]
     public Collection $somethingElseCollection;
 
     public function __construct()
